@@ -1,24 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom';
+import Layout from './components/Layout';
+import Movies from './components/Movies/Movies';
+import Actors from './components/Actors/Actors';
+import Directors from './components/Directiors/Directors';
+import Studios from './components/Studios/Studios';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className='container'>
+        <Routes>
+          <Route path="/" element={<Layout/>} >
+            <Route path="movies/*" element={<Movies/>} />
+            <Route path="actors/*" element={<Actors/>} />
+            <Route path="directors/*" element={<Directors/>} />
+            <Route path="studios/*" element={<Studios/>} />
+            <Route index element={<div>Home</div>} />
+            <Route path="*" element={<Navigate to="/movies" replace={true} />} />
+          </Route>
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
