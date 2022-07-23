@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { recieveMoviesAction } from '../../store/actions/moviesActions';
 
-function MoviesList() {
+function MoviesList({movies}) {
 
   const dispatch = useDispatch()
 
-  const {moviesList: {movies}} = useSelector(state => state)
+  // const {moviesList: {movies}} = useSelector(state => state)
 
   useEffect(() => {
     dispatch(recieveMoviesAction())

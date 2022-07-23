@@ -1,8 +1,10 @@
 import React from 'react';
 
-function MovieItem() {
+function MovieItem({movie}) {
   return (
-    <div>MovieItem</div>
+    <>
+      <img src={movie.poster} alt={'Poster'} ></img>
+    </>
   )
 }
 
