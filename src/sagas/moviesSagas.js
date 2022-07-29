@@ -1,4 +1,4 @@
-import { put } from 'redux-saga';
+import { put } from 'redux-saga/effects';
 
 import cinemaService from '../cinema-service';
 import { 

@@ -13,13 +13,13 @@ export const getAllMoviesRequest = () => {
 };
 export const getAllMoviesSuccess = (payload) => {
   return {
-    type: ACTIONS_TYPES.GET_MOVIES_ACTION,
+    type: ACTIONS_TYPES.GET_MOVIES_SUCCESS,
     payload
   }
 };
 export const getAllMoviesError = (payload) => {
   return {
-    type: ACTIONS_TYPES.GET_MOVIES_ACTION,
+    type: ACTIONS_TYPES.GET_MOVIES_ERROR,
     payload
   }
 };

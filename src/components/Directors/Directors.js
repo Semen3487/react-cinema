@@ -1,3 +1,4 @@
+import { Button } from '@mui/material';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, Navigate, Route, Routes } from 'react-router-dom';
@@ -20,14 +21,16 @@ function Directors() {
 
   return (
     <>
-      <div>
-        <Link to='new' >New</Link>
+      <div className='main-button'>
+        <Link to='new'>
+          <Button type='button' variant='contained'size='small'>
+              New
+          </Button>
+        </Link>
       </div>
       <Routes>
-        {/* <Route path='new' element={<MovieForm/>} />
-        <Route path='new/:id' element={<MovieForm/>} /> */}
-        <Route path='/' element={<DirectorList/>} />
-        <Route path=':id' element={<DirectorItem/>} />
+        <Route path='/' element={<DirectorList directors={directors}/>} />
+        <Route path=':id' element={<DirectorItem directors={directors}/>} />
         <Route path='new' element={<Navigate to='/directors/new/:id'/>} />
       </Routes>
     </>

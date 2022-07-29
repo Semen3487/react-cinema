@@ -5,34 +5,34 @@ import  Stack  from '@mui/material/Stack/Stack';
 import EditIcon from '@mui/icons-material/Edit';
 import  DeleteIcon  from '@mui/icons-material/Delete';
 
-import { deleteMovieAction } from '../../store/actions/moviesActions';
+import { deleteStudioAction } from '../../store/actions/studioActions';
 
 
-function MoviesList({movies}) {
+function StudiosList({studios}) {
 
   const dispatch = useDispatch();
 
   const onDelete = (id) => {
-    dispatch(deleteMovieAction(id))
+    dispatch(deleteStudioAction(id))
   };
 
   return (
     <>
       <ul>
-          {movies.map((movie) => (
-            <li key={movie.id}
+          {studios.map((studio) => (
+            <li key={studio.id}
                 className='main-item'>
               <Stack direction='row' 
                      spacing={3}
                      justifyContent='flex-end'
                      alignItems='center'>
-                <Link to={`${movie.id}`} >
-                  <div className='main-item-title'>{movie.title}</div>
+                <Link to={`${studio.id}`} >
+                  <div className='main-item-title'>{studio.title}</div>
                 </Link>
-                <Link to={`new/${movie.id}`} >
+                <Link to={`new/${studio.id}`} >
                   <EditIcon />
                 </Link>
-                <DeleteIcon onClick={() => onDelete(movie.id)} />
+                <DeleteIcon onClick={() => onDelete(studio.id)} />
               </Stack>
             </li>
           ))}
@@ -41,4 +41,4 @@ function MoviesList({movies}) {
   )
 }
 
-export default MoviesList;
+export default StudiosList;

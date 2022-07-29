@@ -5,34 +5,34 @@ import  Stack  from '@mui/material/Stack/Stack';
 import EditIcon from '@mui/icons-material/Edit';
 import  DeleteIcon  from '@mui/icons-material/Delete';
 
-import { deleteMovieAction } from '../../store/actions/moviesActions';
+import { deleteActorAction } from '../../store/actions/actorActions';
 
 
-function MoviesList({movies}) {
+function ActorsList({actors}) {
 
   const dispatch = useDispatch();
 
   const onDelete = (id) => {
-    dispatch(deleteMovieAction(id))
+    dispatch(deleteActorAction(id))
   };
 
   return (
     <>
       <ul>
-          {movies.map((movie) => (
-            <li key={movie.id}
+          {actors.map((actor) => (
+            <li key={actor.id}
                 className='main-item'>
               <Stack direction='row' 
                      spacing={3}
                      justifyContent='flex-end'
                      alignItems='center'>
-                <Link to={`${movie.id}`} >
-                  <div className='main-item-title'>{movie.title}</div>
+                <Link to={`${actor.id}`} >
+                  <div className='main-item-title'>{actor.fullName}</div>
                 </Link>
-                <Link to={`new/${movie.id}`} >
+                <Link to={`new/${actor.id}`} >
                   <EditIcon />
                 </Link>
-                <DeleteIcon onClick={() => onDelete(movie.id)} />
+                <DeleteIcon onClick={() => onDelete(actor.id)} />
               </Stack>
             </li>
           ))}
@@ -41,4 +41,4 @@ function MoviesList({movies}) {
   )
 }
 
-export default MoviesList;
+export default ActorsList;

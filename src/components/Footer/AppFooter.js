@@ -2,14 +2,15 @@ import React from 'react';
 
 
 const stylesFoot = {
-  backgroundColor: 'rgb(25, 118, 210)',
-  border: '1px solid',
-  minHeight: '70px',
+  fontSize: '1.4em',
+  color: 'white',
+  backgroundColor: '#1976d2',
+  padding: '30px',
 }
 
 function AppFooter() {
   return (
-    <div style={stylesFoot}>AppFooter</div>
+    <div style={stylesFoot}>To be continued...</div>
   )
 }
 

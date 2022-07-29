@@ -2,7 +2,8 @@ import { ErrorMessage, Field, FieldArray, Form, Formik } from 'formik';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
-import Stack, { Button } from '@mui/material';
+import Stack from '@mui/material/Stack/Stack';
+import { Button } from '@mui/material';
 import * as Yup from 'yup';
 
 import { createDirectorAction, updateDirectorAction } from '../../store/actions/directorActions';
