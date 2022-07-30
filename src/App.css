@@ -68,7 +68,7 @@ h2 {
 
 .main-item-title {
   position: absolute;
-  top: 14px;
+  top: 15px;
   left: 12px;
 }
 
@@ -81,3 +81,70 @@ img {
   background-color: var(--item-bgc);
   border-radius: 4px;
 }
+
+.form-inner {
+  margin: 0 5% 5%;
+  padding: 20px;
+  background-color: var(--item-bgc);
+  border-radius: 4px;
+
+}
+
+.form-item {
+  margin: 8px;
+}
+
+.form-area {
+  width: 80%;
+  min-height: 70px;
+  text-align: left;
+  outline: transparent;
+}
+
+.form-button {
+  margin: 10px;
+}
+
+.error {
+  font-size: 0.8em;
+  color: red;
+}
+
+input {
+  width: 80%;
+  height: 35px;
+  text-align: left;
+  letter-spacing: 1.5px;
+  text-indent: 2%;
+  outline: transparent;
+  border-color: var(--container-bgc);
+
+  border-radius: 4px;
+}
+
+.label {
+  padding-top: 10px;
+}
+
+legend {
+  font-size: small;
+}
+
+fieldset {
+  border-color: transparent;
+  border-radius: 10px;
+  background-color: var(--container-bgc);
+}
+
+.input-button {
+  margin-bottom: 5px;
+  margin-right: 5px;
+  width: 35px;
+  height: 35px;
+  font-size: 1.3em;
+  border-color: transparent;
+  border-radius: 50%;
+  color: var(--item-bgc);
+  background-color: var(--container-col);
+}
+
