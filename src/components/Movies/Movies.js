@@ -23,7 +23,7 @@ function Movies() {
     <>
       <div className='main-button'>
         <Link to='new'>
-          <Button type='button' variant='contained'size='small'>
+          <Button type='button' variant='contained' size='small'>
               New
           </Button>
         </Link>

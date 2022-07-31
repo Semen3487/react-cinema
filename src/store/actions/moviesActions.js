@@ -52,24 +52,24 @@ export const createMovieError = (payload) => {
 //* update
 export const updateMovieAction = (payload) => {
   return {
-    type: ACTIONS_TYPES.POST_MOVIE_ACTION,
+    type: ACTIONS_TYPES.PUT_MOVIE_ACTION,
     payload
   }
 };
 export const updateMovieRequest = () => {
   return {
-    type: ACTIONS_TYPES.POST_MOVIE_REQUEST,
+    type: ACTIONS_TYPES.PUT_MOVIE_REQUEST,
   }
 };
 export const updateMovieSuccess = (payload) => {
   return {
-    type: ACTIONS_TYPES.POST_MOVIE_SUCCESS,
+    type: ACTIONS_TYPES.PUT_MOVIE_SUCCESS,
     payload
   }
 };
 export const updateMovieError = (payload) => {
   return {
-    type: ACTIONS_TYPES.POST_MOVIE_ERROR,
+    type: ACTIONS_TYPES.PUT_MOVIE_ERROR,
     payload
   }
 };

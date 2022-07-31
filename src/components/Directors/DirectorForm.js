@@ -39,30 +39,21 @@ function DirectorForm() {
     return (
       <Form className='form-inner'>
         <Stack>
-          <Stack direction='row' spacing={2} className='form-item'>
-            <label htmlFor='fullName'
-                   className='label'>
-              Full Name
-            </label>
-            <Field name='fullName'/>
-          </Stack>
-          <ErrorMessage name='fullName' >
-              {(msg) => <div className='error' >{msg}</div>}
-          </ErrorMessage>
-          <Stack direction='row' spacing={2} className='form-item'>
-            <label htmlFor='birthYear'
-                   className='label'>
-              Birth Year
-            </label>
-            <Field name='birthYear' as='select'/>
-          </Stack>
-          <Stack direction='row' spacing={2} className='form-item'>
-            <label htmlFor='nationality'
-                   className='label'>
-              Nationality
-            </label>
-            <Field name='nationality' as='select'/>
-          </Stack>
+          <fieldset className='form-item'>
+            <legend>Full Name</legend>
+              <Field name='fullName'/>
+            <ErrorMessage name='fullName' >
+                {(msg) => <div className='error' >{msg}</div>}
+            </ErrorMessage>
+          </fieldset>
+          <fieldset className='form-item'>
+            <legend>Birth Year</legend>
+            <Field name='birthYear' />
+          </fieldset>
+          <fieldset className='form-item'>
+            <legend>Nationality</legend>
+            <Field name='nationality' />
+          </fieldset>
           <fieldset className='form-item'>
             <legend>Movies</legend>
             <FieldArray name='movies' >
@@ -92,12 +83,10 @@ function DirectorForm() {
               } }
             </FieldArray>
           </fieldset>
-          <Stack direction='row' spacing={2} className='form-item'>
-            <label htmlFor='image'>
-              Photo
-            </label>
+          <fieldset className='form-item'>
+            <legend>Photo</legend>
             <Field name='image' as='textarea' className='form-area'/>
-          </Stack>
+          </fieldset>
           <Stack direction='row' spacing={2} justifyContent='center' className='form-button'>
             <Button type='submit' variant='contained' size='medium'
                     startIcon={<SaveIcon/>}>

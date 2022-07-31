@@ -38,36 +38,25 @@ function StudioForm() {
     return (
       <Form className='form-inner'>
         <Stack>
-          <Stack direction='row' spacing={2} className='form-item'>
-            <label htmlFor='title'
-                   className='label'>
-              Title
-            </label>
+          <fieldset className='form-item'>
+            <legend>Title</legend>
             <Field name='title'/>
-          </Stack>
-          <ErrorMessage name='title' >
-              {(msg) => <div className='error' >{msg}</div>}
-          </ErrorMessage>
-          <Stack direction='row' spacing={2} className='form-item'>
-            <label htmlFor='location'
-                   className='label'>
-              Location
-            </label>
+            <ErrorMessage name='title' >
+                {(msg) => <div className='error' >{msg}</div>}
+            </ErrorMessage>
+          </fieldset>
+          <fieldset className='form-item'>
+            <legend>Location</legend>
             <Field name='location' />
-          </Stack>
-          <Stack direction='row' spacing={2} className='form-item'>
-            <label htmlFor='foundationYear'
-                   className='label'>
-              Foundation Year
-            </label>
+          </fieldset>
+          <fieldset className='form-item'>
+            <legend>Foundation Year</legend>
             <Field name='foundationYear' />
-          </Stack>
-          <Stack direction='row' spacing={2} className='form-item'>
-            <label htmlFor='logo'>
-              Logo
-            </label>
+          </fieldset>
+          <fieldset className='form-item'>
+            <legend>Logo</legend>
             <Field name='logo' as='textarea' className='form-area'/>
-          </Stack>
+          </fieldset>
           <Stack direction='row' spacing={2} justifyContent='center' className='form-button'>
             <Button type='submit' variant='contained' size='medium'
                     startIcon={<SaveIcon/>}>

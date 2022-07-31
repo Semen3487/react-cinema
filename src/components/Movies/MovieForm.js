@@ -44,17 +44,13 @@ function MovieForm() {
     return (
       <Form className='form-inner'>
         <Stack>
-          <Stack direction='row' spacing={2} className='form-item'>
-            <label htmlFor='title'
-                   className='label'>
-              Title
-            </label>
+        <fieldset className='form-item'>
+          <legend>Title</legend>
             <Field name='title'/>
-          </Stack> 
           <ErrorMessage name='title' >
               {(msg) => <div className='error' >{msg}</div>}
           </ErrorMessage>
-      
+          </fieldset>
           <fieldset className='form-item'>
             <legend>Actors</legend>
             <FieldArray name='actors' >
@@ -142,12 +138,10 @@ function MovieForm() {
               }}
             </FieldArray>
           </fieldset>
-          <Stack direction='row' spacing={2} className='form-item'>
-            <label htmlFor='poster'>
-              Poster
-            </label>
+          <fieldset className='form-item'>
+            <legend>Photo</legend>
             <Field name='poster' as='textarea' className='form-area'/>
-          </Stack>
+          </fieldset>
           <Stack direction='row' spacing={2} justifyContent='center' className='form-button'>
             <Button type='submit' variant='contained' size='medium'
                     startIcon={<SaveIcon/>}>

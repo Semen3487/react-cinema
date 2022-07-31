@@ -42,13 +42,16 @@ h2 {
   background-color: var(--container-bgc);
 }
 
+.content * {
+  border-radius: 4px;
+}
+
 .menu-item,
 .main-item {
   margin: 0 10% 5%;
   padding: 12px;
   font-size: 1.2em;
   border: 1px solid transparent;
-  border-radius: 4px;
   background-color: var(--item-bgc);
 }
 
@@ -79,19 +82,22 @@ img {
 .item-content {
   padding: 12px 5px 30px;
   background-color: var(--item-bgc);
-  border-radius: 4px;
 }
 
 .form-inner {
   margin: 0 5% 5%;
   padding: 20px;
   background-color: var(--item-bgc);
-  border-radius: 4px;
-
+  border: 1px solid var(--a-col);
 }
 
 .form-item {
   margin: 8px;
+  border: 1px solid transparent;
+}
+
+.form-item:hover {
+  border: 1px solid var(--container-col);
 }
 
 .form-area {
@@ -99,6 +105,7 @@ img {
   min-height: 70px;
   text-align: left;
   outline: transparent;
+  border: 1px solid var(--a-col);
 }
 
 .form-button {
@@ -111,15 +118,13 @@ img {
 }
 
 input {
-  width: 80%;
-  height: 35px;
+  width: 70%;
+  height: 30px;
   text-align: left;
   letter-spacing: 1.5px;
   text-indent: 2%;
   outline: transparent;
-  border-color: var(--container-bgc);
-
-  border-radius: 4px;
+  border: 1px solid var(--a-col);
 }
 
 .label {
@@ -146,5 +151,6 @@ fieldset {
   border-radius: 50%;
   color: var(--item-bgc);
   background-color: var(--container-col);
+  cursor: pointer;
 }
 

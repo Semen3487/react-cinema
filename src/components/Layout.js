@@ -8,11 +8,6 @@ import CinemaService from '../Service/CinemaService';
 import AppFooter from './Footer/AppFooter';
 
 
-// const stylesFoot = {
-//   backgroundColor: 'rgb(25, 118, 210)',
-//   border: '1px solid',
-// }
-
 function Layout() {
   return (
     <>

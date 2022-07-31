@@ -1,25 +1,7 @@
 import ACTIONS_TYPES from '../actions/actionsTypes';
 
 const initialState = {
-  movies: [
-    // {
-    //   id: 1,
-    //   title: "Indiana Johns",
-    //   directorId: 1,
-    //   actorId: 1,
-    //   studioId: 1,
-    //   poster: "https://upload.wikimedia.org/wikipedia/ru/thumb/8/8b/IJandCrystalSkull.jpg/220px-IJandCrystalSkull.jpg"
-    // },
-    // {
-    //   id: 2,
-    //   title: "Alien",
-    //   directorId: 2,
-    //   actorId: 3,
-    //   studioId: 2,
-    //   poster: "https://upload.wikimedia.org/wikipedia/ru/thumb/c/c3/Alien_movie_poster.jpg/232px-Alien_movie_poster.jpg"
-    // },
-    
-  ],
+  movies: [],
   isFetching: false,
   error: null,
 };
