@@ -29,7 +29,7 @@ function MovieForm() {
     navigate('/movies')
   };
 
-  const onMovieSubmit = (values, action) => {
+  const onMovieSubmit = (values, actions) => {
     !values.id
       ? dispatch(createMovieAction({...values, id: Date.now()}))
       : dispatch(updateMovieAction(values));
@@ -40,7 +40,7 @@ function MovieForm() {
     title: Yup.string().required('Title is required')
   });
 
-  const renderFormik = ({values}) => {
+  const renderFormik = (props) => {
     return (
       <Form className='form-inner'>
         <Stack>
@@ -144,7 +144,8 @@ function MovieForm() {
           </fieldset>
           <Stack direction='row' spacing={2} justifyContent='center' className='form-button'>
             <Button type='submit' variant='contained' size='medium'
-                    startIcon={<SaveIcon/>}>
+                    startIcon={<SaveIcon/>}
+                    disabled={!props.isValid}>
                       Save
             </Button>
             <Button type='button' variant='contained' size='medium'

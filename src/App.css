@@ -46,6 +46,11 @@ h2 {
   border-radius: 4px;
 }
 
+.content-image {
+  max-height: 600px;
+  object-fit: contain;
+}
+
 .menu-item,
 .main-item {
   margin: 0 10% 5%;

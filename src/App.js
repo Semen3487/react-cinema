@@ -17,7 +17,12 @@ function App() {
             <Route path="actors/*" element={<Actors/>} />
             <Route path="directors/*" element={<Directors/>} />
             <Route path="studios/*" element={<Studios/>} />
-            <Route index element={<div>Home</div>} /> 
+            <Route index element={
+                <div>
+                  <img src='https://upload.wikimedia.org/wikipedia/commons/6/6e/Chaplin_The_Kid.jpg' alt='poster' 
+                       className='content-image'/>
+                </div>
+              } /> 
             <Route path="*" element={<Navigate to="/movies" replace={true} />} />
           </Route>
         </Routes>

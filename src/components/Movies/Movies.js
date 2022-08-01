@@ -17,7 +17,6 @@ function Movies() {
     dispatch(getAllMoviesAction())
   }, [dispatch]);
 
-  console.log(movies)
 
   return (
     <>

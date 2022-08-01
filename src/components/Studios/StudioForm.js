@@ -23,7 +23,7 @@ function StudioForm() {
 
   const goBackTo = () => navigate('/studios');
 
-  const onStudioSubmit = (values, action) => {
+  const onStudioSubmit = (values, actions) => {
     !values.id
       ? dispatch(createStudioAction({...values, id: Date.now()}))
       : dispatch(updateStudioAction(values));
@@ -34,7 +34,7 @@ function StudioForm() {
     title: Yup.string().required('Field Title is required')
   });
 
-  const renderFormik = ({values}) => {
+  const renderFormik = (props) => {
     return (
       <Form className='form-inner'>
         <Stack>
@@ -59,7 +59,8 @@ function StudioForm() {
           </fieldset>
           <Stack direction='row' spacing={2} justifyContent='center' className='form-button'>
             <Button type='submit' variant='contained' size='medium'
-                    startIcon={<SaveIcon/>}>
+                    startIcon={<SaveIcon/>}
+                    disabled={!props.isValid}>
                       Save
             </Button>
             <Button type='button' variant='contained' size='medium'
